@@ -1,4 +1,4 @@
-class TiketManager {
+/*class TiketManager {
     #precioBaseDeGanancia = 2
     constructor(){
         this.eventos = []
@@ -50,4 +50,34 @@ ponerEventoEnGira(idEvento,nuevoLugar,nuevaFecha){
     : 1
   }
 
-}
+}*/
+//SINCRONICA
+const fs = requiere('fs')
+
+//escribir el archivo
+//fs.writeFileSync('archivo.txt', 'primer archivo creado')
+
+//leer un archivo
+//const infoArchivo = fs.readFileSync('archivo.txt')
+//console.log(infoArchivo);
+
+//eliminar un archivo
+//fs.unlinkSync('archivo.txt')
+
+//existe un archivo
+//const existeArchivo = fs.existsSync ('archivo.txt')
+//console.log(existeArchivo);
+
+//añadir informacion
+//fs.appendFileSync('archivo.txt' , 'segundo parrafo')
+
+//ASINCRONICA
+
+//escribir el archivo
+fs.writeFile('archivoAsinc.txt' , 'primer archivo', (error)=>{
+    if (error) {
+        console.log(error);
+    } else {
+        console.log('Archivo creado con exito');
+    }
+})
